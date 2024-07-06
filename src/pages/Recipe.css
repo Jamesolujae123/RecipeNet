@@ -326,7 +326,7 @@
 
 .recipe-vid {
   margin-top: 20px;
-  width: 350px;
+  width: 550px;
   height: 315px;
 }
 
@@ -386,6 +386,12 @@
   .meat {
     width: 360px;
   }
+.recipe-vid {
+  margin-top: 20px;
+  width: 290px;
+  height: 315px;
+}
+  
 
   .d-det {
     width: 358px;
