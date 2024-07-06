@@ -139,7 +139,7 @@ const Prime = () => {
         </div>
       </div>
 
-      <div className="categ-r" data-aos="fade-right">
+      <div className="categ-r">
         <div className="cate">
           <div className="img-c">
             <img className="cate-pic-fish" src={fish} alt="" />
