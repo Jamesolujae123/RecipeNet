@@ -273,7 +273,7 @@ const Prime = () => {
                       </div>
                     </div>
                     <div className="wrapper">
-                      <img className="food-img" src={${config.baseUrl}${food.image_url}`} alt="recipe pic" />
+                      <img className="food-img" src={`${config.baseUrl}${food.image_url}`} alt="recipe pic" />
                     </div>
                   </div>
                 ))}
