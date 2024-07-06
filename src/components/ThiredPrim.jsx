@@ -47,6 +47,9 @@ const ThirdPrim = ({ topting, heading }) => {
     getAllRecipes();
   }, []);
 
+  setInterval(() => {
+    getAllRecipes(); }, 600000);
+
   return (
     <div className="prim-cc">
       <div className="hdd-ccont">
