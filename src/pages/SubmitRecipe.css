@@ -300,15 +300,15 @@
   .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content .ck-menu-bar,
   .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content .ck-toolbar {
     padding-left: 22px;
-    width: 350px;
+    width: 310px;
   }
   .ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable,
   .ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
     padding-left: 22px;
-    width: 350px;
+    width: 310px;
   }
   .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content {
-    width: 350px;
+    width: 310px;
   }
 
   .ingr-container {
