@@ -9,3 +9,8 @@ Recipie net is a web application built with React and Node.js backend, designed 
 User
 3. Interaction: Rate, comment and make reviews on recipes and post you love.
 3. Search Functionality: Easily find recipes based on  tags, or categories.
+
+# Technologies Used:
+Frontend: React.js, HTML, CSS
+Backend: Node.js, Express.js
+Database: SQL
