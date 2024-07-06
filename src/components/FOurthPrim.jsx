@@ -132,7 +132,7 @@ const FourthPrim = ({ topting, heading }) => {
                     </div>
 
                     <div className="wrapper">
-                      <img className="food-img" src={food.image} alt="" />
+                      <img className="food-img" src={`${config.baseUrl}${food.image_url}`} alt="" />
                     </div>
                   </div>
                 ))}
