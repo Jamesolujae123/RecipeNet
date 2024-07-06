@@ -129,25 +129,6 @@ const Nav = () => {
         </div>
         <div className="conti">
           <div className="right-cont">
-            <span>
-              {srcc ? (
-                <Link className="rc-icon" onClick={unSrcc}>
-                  <IoCloseSharp />
-                </Link>
-              ) : (
-                <span className="rc-icon" onClick={initiateSearch}>
-                  <IoMdSearch />
-                </span>
-              )}
-            </span>
-            <div className={search ? "search-cont" : "searchh"}>
-              <span className="serccc">What delicacy are you craving for</span>
-              <input
-                className="search-tinn"
-                type="search"
-                onChange={handleSearch}
-              />
-            </div>
             {welc.welcome ? (
               <div
                 ref={myRef}
