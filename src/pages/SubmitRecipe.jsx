@@ -88,7 +88,7 @@ const AddRecipe = () => {
         }, 1000);
       }
 
-      // navigateTo("/");
+       navigateTo("/");
     } catch (error) {
       console.log(error);
     }
