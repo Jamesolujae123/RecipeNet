@@ -13,4 +13,5 @@ User
 # Technologies Used:
 Frontend: React.js, HTML, CSS
 Backend: Node.js, Express.js by my big bro @Oluwaloni Emmanuel for more details check https://github.com/emmyvera/recipe-api
+
 Database: SQL
