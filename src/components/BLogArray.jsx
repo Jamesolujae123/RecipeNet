@@ -42,7 +42,7 @@ const BlogArray = ({ BlogHead }) => {
         <div className="abt">
           <span className="acc-3">Blog</span>
           <p className="tng">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
+             Discover tips, stories, and culinary inspiration.
           </p>
         </div>
       </div>
