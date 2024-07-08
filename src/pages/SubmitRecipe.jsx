@@ -113,7 +113,7 @@ const AddRecipe = () => {
         <div className="abt">
           <span className="acc-3">Add a Recipe</span>
           <p className="tng">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
+           Share your delicious creations with the world.
           </p>
         </div>
       </div>
