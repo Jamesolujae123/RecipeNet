@@ -64,7 +64,7 @@ const Nav = () => {
   const logoff = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user_id");
-    localStorage.removeItem("user_LastName");
+    localStorage.removeItem("user_lastName");
     navigateTo("/");
   };
 
