@@ -129,10 +129,7 @@ const EditRecipe = () => {
       <div className="add-cont">
         <div className="intro-2">
           <div className="abt">
-            <span className="acc-3">Add a Recipe</span>
-            <p className="tng">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-            </p>
+            <span className="acc-3">Edit Recipe</span>
           </div>
         </div>
         <form onSubmit={handleSub} className="fom">
