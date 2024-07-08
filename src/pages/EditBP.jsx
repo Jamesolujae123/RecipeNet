@@ -83,10 +83,7 @@ const EditBP = () => {
       <Toaster />
       <div className="intro-2">
         <div className="abt">
-          <span className="acc-3">Make a blog post</span>
-          <p className="tng">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-          </p>
+          <span className="acc-3">Edit post</span>
         </div>
       </div>
       <form onSubmit={handleSub} className="fom">
