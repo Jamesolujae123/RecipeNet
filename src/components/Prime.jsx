@@ -60,7 +60,7 @@ const Prime = () => {
 
   return (
     <div className="req">
-      <div className="intro">
+    <div className="intro">
         <div>
           <span className="acc">Get access to</span>
           <p className="acc">
@@ -70,25 +70,26 @@ const Prime = () => {
         <div className="d-cont">
           {" "}
           <span className="acc-d">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-            accusamus dolorem quam at
+            Recipe Net: Where Every Recipe is a Culinary Adventure!
           </span>
         </div>
 
         <div className="info">
           <div className="info-highlighted">
             <p className="f-g-highlight">Fried Food</p>
-            <p className="f-g-cont">Lorem ipsum dolor, sit amet consectetur</p>
+            <p className="f-g-cont">Crispy delights that sizzle and satisfy.</p>
           </div>
           <div className="info-n">
             {" "}
             <p className="f-genre">Baked Delicacies</p>
-            <p className="f-g-cont">Lorem ipsum dolor, sit amet consectetur</p>
+            <p className="f-g-cont">
+              Golden-baked goodness fresh from the oven
+            </p>
           </div>
           <div className="info-n">
             {" "}
             <p className="f-genre">Steamed Food</p>
-            <p className="f-g-cont">Lorem ipsum dolor, sit amet consectetur</p>
+            <p className="f-g-cont">Healthy flavors sealed in every bite.</p>
           </div>
         </div>
       </div>
