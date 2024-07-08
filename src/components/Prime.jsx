@@ -48,24 +48,24 @@ const Prime = () => {
     setMore(false);
   };
 
-  if (foods?.length > 3) {
-    () => setIsMore(true);
-  }
+  // if (foods?.length > 3) {
+  //   setIsMore(true);
+  // }
 
   useEffect(() => {
-    // AOS.init({
-    //   offset: 200,
-    //   duration: 1500,
-    //   easing: "ease",
-    //   startEvent: "load",
-    // });
+    AOS.init({
+      offset: 200,
+      duration: 1500,
+      easing: "ease",
+      startEvent: "load",
+    });
 
     getAllRecipes();
   }, []);
 
   return (
     <div className="req">
-      <div className="intro">
+      <div className="intro" data-aos="fade-left" data-aos-once="true">
         <div>
           <span className="acc">Get access to</span>
           <p className="acc">
@@ -204,7 +204,7 @@ const Prime = () => {
                 :D
               </p>
             </div>
-            <div className="sec">
+            <div className="sec" data-aos="fade-left" data-aos-once="true">
               {foods?.slice(0, 3).map((food) => (
                 <div
                   onClick={() => {
@@ -250,7 +250,11 @@ const Prime = () => {
           <div className="view-more">
             {more ? (
               <div className="remainder-cont">
-                <div className="sec-m">
+                <div
+                  className="sec-m"
+                  data-aos="fade-left"
+                  data-aos-once="true"
+                >
                   {foods?.slice(3).map((food) => (
                     <div
                       onClick={() => {
