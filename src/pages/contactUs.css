@@ -64,6 +64,15 @@
   color: orange;
 }
 
+.soc-it {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 30px;
+  font-style: normal;
+  color: orange;
+}
+
 .soc-arr {
   margin-top: 15px;
   display: flex;
@@ -101,6 +110,10 @@
 
   .tng {
     padding-left: 20px;
+  }
+
+  .soc-it {
+    font-size: 18px;
   }
 
   .contact-us-cont {
