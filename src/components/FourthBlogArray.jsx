@@ -116,9 +116,13 @@ const FourthBlogArray = ({ BlogHead }) => {
           })}
         </div>
         <div>
-          <button className="add-b" onClick={addToblog}>
-            Add to blog
-          </button>
+          {token ? (
+            <button className="add-b" onClick={addToblog}>
+              Add to blog
+            </button>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>
