@@ -29,6 +29,7 @@ const Prime = () => {
 
   const [foods, setFoods] = useState(null);
   const [more, setMore] = useState(false);
+  const [isMore, setIsMore] = useState(false);
 
   const lastN = useContext(User);
   const usr = useContext(UserL);
@@ -47,6 +48,10 @@ const Prime = () => {
     setMore(false);
   };
 
+  if (foods?.length > 3) {
+    () => setIsMore(true);
+  }
+
   useEffect(() => {
     // AOS.init({
     //   offset: 200,
@@ -60,7 +65,7 @@ const Prime = () => {
 
   return (
     <div className="req">
-    <div className="intro">
+      <div className="intro">
         <div>
           <span className="acc">Get access to</span>
           <p className="acc">
@@ -241,62 +246,66 @@ const Prime = () => {
             </div>
           </div>
         </div>
-        <div className="view-more">
-          {more ? (
-            <div className="remainder-cont">
-              <div className="sec-m">
-                {foods?.slice(3).map((food) => (
-                  <div
-                    onClick={() => {
-                      navigateTo(`/recipe-d/${food.id}`);
-                    }}
-                    key={food}
-                    className="food"
-                  >
-                    <div className="food-d">
-                      <div className="ting">
-                        <p className="f-name">{food.food_name}</p>
-                        <div className="spatu">
-                          {" "}
-                          <span className="spatula">
-                            <TbGrillSpatula />
-                            <TbGrillSpatula />
-                            <TbGrillSpatula />
-                            <TbGrillSpatula />
-                            <TbGrillSpatula className="fade" />
-                          </span>
+        {isMore ? (
+          <div className="view-more">
+            {more ? (
+              <div className="remainder-cont">
+                <div className="sec-m">
+                  {foods?.slice(3).map((food) => (
+                    <div
+                      onClick={() => {
+                        navigateTo(`/recipe-d/${food.id}`);
+                      }}
+                      key={food}
+                      className="food"
+                    >
+                      <div className="food-d">
+                        <div className="ting">
+                          <p className="f-name">{food.food_name}</p>
+                          <div className="spatu">
+                            {" "}
+                            <span className="spatula">
+                              <TbGrillSpatula />
+                              <TbGrillSpatula />
+                              <TbGrillSpatula />
+                              <TbGrillSpatula />
+                              <TbGrillSpatula className="fade" />
+                            </span>
+                          </div>
+                        </div>
+                        <div className="Auth">
+                          <p className="Author">
+                            {food.User.first_name} {food.User.last_name}
+                          </p>
                         </div>
                       </div>
-                      <div className="Auth">
-                        <p className="Author">
-                          {food.User.first_name} {food.User.last_name}
-                        </p>
+                      <div className="wrapper">
+                        <img
+                          className="food-img"
+                          src={`${config.baseUrl}${food.image_url}`}
+                          alt=""
+                        />
                       </div>
                     </div>
-                    <div className="wrapper">
-                      <img
-                        className="food-img"
-                        src={`${config.baseUrl}${food.image_url}`}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
 
-              <span className="vw-cont-up" onClick={closeRemainder}>
-                <FaArrowUp />
+                <span className="vw-cont-up" onClick={closeRemainder}>
+                  <FaArrowUp />
+                </span>
+              </div>
+            ) : (
+              <span onClick={displayRemainder} className="vw-cont">
+                view more{" "}
+                <span>
+                  <FaArrowDown />
+                </span>
               </span>
-            </div>
-          ) : (
-            <span onClick={displayRemainder} className="vw-cont">
-              view more{" "}
-              <span>
-                <FaArrowDown />
-              </span>
-            </span>
-          )}
-        </div>
+            )}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
