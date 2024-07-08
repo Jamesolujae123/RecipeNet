@@ -35,6 +35,7 @@ const Recipe = () => {
   const [foodd, setFoodd] = useState(null);
   const [edit, setEdit] = useState(false);
   const [writeRev, setWriteRev] = useState(false);
+  const [isTokenAvailable, setIsTokenAvailable] = useState(false);
 
   const [reviews, setReviews] = useState(null);
   const { id } = useParams();
@@ -80,6 +81,8 @@ const Recipe = () => {
     if (sendPost.status === 200) {
       console.log("review sent Successfully");
       toast.success("review sent Successfully");
+
+      GetReviews();
     }
   };
 
@@ -149,7 +152,6 @@ const Recipe = () => {
             alt=""
           />
         </div>
-
         <div className="d-det">
           <div className="ini">
             <div className="bars"></div>
@@ -213,136 +215,138 @@ const Recipe = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen="true"
-            /> 
+            />
           </div>
         </div>
-
-        <div className="blog-r">
-          <div className="blog-hd">
-            <span className="star">
-              <FaRegStar />
-            </span>
-            <span className="hd-text">Reviews & Rating</span>
-          </div>
-          <div className="blog-g">
-            {edit ? (
-              <div className="review-cont">
-                <div className="rev">
-                  <h3 className="rev-title">Edit review</h3>
-
-                  <form onSubmit={sendReview} className="rev-form">
-                    <textarea
-                      className="review-ting"
-                      cols={30}
-                      rows={10}
-                      value={review.description}
-                      name="description"
-                      id=""
-                      onChange={handleReview}
-                    ></textarea>
-                    <input
-                      name="rating"
-                      className="rat"
-                      value={review.rating}
-                      type="text"
-                      placeholder="rating"
-                      onChange={handleReview}
-                    />
-                    <button className="rev-sb">Submit</button>
-                  </form>
-                </div>
+        {token ? (
+          <div>
+            <div className="blog-r">
+              <div className="blog-hd">
+                <span className="star">
+                  <FaRegStar />
+                </span>
+                <span className="hd-text">Reviews & Rating</span>
               </div>
-            ) : (
-              <div>
-                {reviews?.map((blob) => (
-                  <div className="blo" key={blob}>
-                    <div>
-                      <img src={profile} alt="" />
-                    </div>
-                    <div className="blo-cont">
-                      <div className="auth-cont">
-                        <div className="author-tings">
-                          <span className="auth">{blob.text}</span>
-                          <div>
-                            {blob?.user_id == uid ? (
-                              <div className="options-cont">
-                                {/* <button className="eb" onClick={EditReview}>
-                                  Edit
-                                </button> */}
-                                <form action="">
-                                  <button
-                                    className="del-b"
-                                    onClick={async () => {
-                                      const del = await axios.delete(
-                                        `${baseUrl}/reviews/${blob.id}`,
-                                        {
-                                          headers,
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    Delete
-                                  </button>
-                                </form>
-                              </div>
-                            ) : (
-                              ""
-                            )}
-                          </div>
-                        </div>{" "}
-                        <div>
-                          <span className="date">
-                            Date: <span className="d">{blob.d}</span>
-                          </span>
-                        </div>
-                      </div>
-                      <div className="stars">
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <MdOutlineStarBorder />
-                      </div>
-                      <div className="b-cont">{blob.description}</div>
+              <div className="blog-g">
+                {edit ? (
+                  <div className="review-cont">
+                    <div className="rev">
+                      <h3 className="rev-title">Edit review</h3>
+
+                      <form onSubmit={sendReview} className="rev-form">
+                        <textarea
+                          className="review-ting"
+                          cols={30}
+                          rows={10}
+                          value={review.description}
+                          name="description"
+                          id=""
+                          onChange={handleReview}
+                        ></textarea>
+                        <input
+                          name="rating"
+                          className="rat"
+                          value={review.rating}
+                          type="text"
+                          placeholder="rating"
+                          onChange={handleReview}
+                        />
+                        <button className="rev-sb">Submit</button>
+                      </form>
                     </div>
                   </div>
-                ))}{" "}
+                ) : (
+                  <div>
+                    {reviews?.map((blob) => (
+                      <div className="blo" key={blob}>
+                        <div>
+                          <img src={profile} alt="" />
+                        </div>
+                        <div className="blo-cont">
+                          <div className="auth-cont">
+                            <div className="author-tings">
+                              <span className="auth">{blob.text}</span>
+                              <div>
+                                {blob?.user_id == uid ? (
+                                  <div className="options-cont">
+                                    {/* <button className="eb" onClick={EditReview}>
+                                  Edit
+                                </button> */}
+                                    <form action="">
+                                      <button
+                                        className="del-b"
+                                        onClick={async () => {
+                                          const del = await axios.delete(
+                                            `${baseUrl}/reviews/${blob.id}`,
+                                            {
+                                              headers,
+                                            }
+                                          );
+                                        }}
+                                      >
+                                        Delete
+                                      </button>
+                                    </form>
+                                  </div>
+                                ) : (
+                                  ""
+                                )}
+                              </div>
+                            </div>{" "}
+                            <div>
+                              <span className="date">
+                                Date: <span className="d">{blob.d}</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div className="stars">
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
+                            <MdOutlineStarBorder />
+                          </div>
+                          <div className="b-cont">{blob.description}</div>
+                        </div>
+                      </div>
+                    ))}{" "}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        </div>
+            </div>
 
-        {writeRev ? (
-          ""
-        ) : (
-          <div className="review-cont">
-            <div className="rev">
-              <h3 className="rev-title">Write a review</h3>
+            <div className="review-cont">
+              <div className="rev">
+                <h3 className="rev-title">Write a review</h3>
 
-              <form onSubmit={sendReview} className="rev-form">
-                <textarea
-                  className="review-ting"
-                  cols={30}
-                  rows={10}
-                  value={review.description}
-                  name="description"
-                  id=""
-                  onChange={handleReview}
-                ></textarea>
-                <input
-                  name="rating"
-                  className="rat"
-                  value={review.rating}
-                  type="text"
-                  placeholder="rating"
-                  onChange={handleReview}
-                />
-                <button className="rev-sb">Submit</button>
-              </form>
+                <form onSubmit={sendReview} className="rev-form">
+                  <textarea
+                    className="review-ting"
+                    cols={30}
+                    rows={10}
+                    value={review.description}
+                    name="description"
+                    id=""
+                    onChange={handleReview}
+                  ></textarea>
+                  <input
+                    name="rating"
+                    className="rat"
+                    value={review.rating}
+                    type="text"
+                    placeholder="rating"
+                    onChange={handleReview}
+                  />
+                  <button className="rev-sb">Submit</button>
+                </form>
+              </div>
             </div>
           </div>
+        ) : (
+          ""
         )}
       </div>
+
       <div className="fixed">
         <div>
           <form className="top-ting" onSubmit={handleSubmit}>
