@@ -55,19 +55,19 @@ const Contact = () => {
           <div className="soc-arr">
             <div className="soc">
               <span className="soc-i">Facebook:</span>
-              <span>facebook.com/recipenetwork</span>
+              <span className="soc-it">facebook.com/recipenetwork</span>
             </div>
             <div className="soc">
               <span className="soc-i">Twitter:</span>
-              <span>twitter.com/recipenetwork</span>
+              <span className="soc-it">twitter.com/recipenetwork</span>
             </div>
             <div className="soc">
               <span className="soc-i">Instagram:</span>
-              <span>instagram.com/recipenetwork</span>
+              <span className="soc-it">instagram.com/recipenetwork</span>
             </div>
             <div className="soc">
               <span className="soc-i">Pinterest:</span>
-              <span>pinterest.com/recipenetwork</span>
+              <span className="soc-it">pinterest.com/recipenetwork</span>
             </div>
           </div>
         </div>
