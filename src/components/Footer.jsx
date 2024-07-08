@@ -1,10 +1,41 @@
 import React from "react";
 import "./Footer.css";
+import { useState, useEffect } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { IoLogoGoogleplus } from "react-icons/io";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import config from "../../config";
 
 const Footer = () => {
+  const [foods, setFoods] = useState(null);
+  const [Blog, setBlog] = useState(null);
+
+  const getAllRecipes = async () => {
+    const response = await axios.get(`${config.baseUrl}/recipes`);
+    setFoods(response?.data?.recipes);
+    console.log(response);
+  };
+
+  const GetAllPosts = async () => {
+    const response = await axios.get(`${config.baseUrl}/posts`);
+    setBlog(response?.data);
+    console.log(response);
+  };
+
+  useEffect(() => {
+    // AOS.init({
+    //   offset: 200,
+    //   duration: 1500,
+    //   easing: "ease",
+    //   startEvent: "load",
+    // });
+
+    getAllRecipes();
+    GetAllPosts();
+  }, []);
+
   return (
     <div className="footer">
       <div className="first-f">
@@ -18,18 +49,45 @@ const Footer = () => {
           </div>
           <div>
             <p className="f-ting">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Obcaecati laudantium dolor harum porro dolores libero temporibus
-              soluta adipisci ipsum sunt illo eos veniam atque minus facilis,
-              accusantium reprehenderit aliquid praesentium?
+              At Recipe Net, we believe that cooking is more than just preparing
+              meals it's a journey of discovery, creativity, and joy. Our
+              mission is to inspire and empower home cooks of all levels to
+              create delicious and nutritious meals for themselves and their
+              loved ones.
             </p>
           </div>
           <div>
-            <button className="Read">Read More</button>
+            <Link to="/AboutUs" className="Readdd">
+              Read More
+            </Link>
           </div>
         </div>
-        <div className="middle-ting"></div>
-        <div className="right-ting"></div>
+        <div className="middle-ting">
+          <div>
+            {foods?.slice(8, 10).map((food) => (
+              <div key={food}>
+                <div>
+                  <div>
+                    <span>{food?.food_name}</span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="right-ting">
+          {Blog?.slice(8, 10).map((blo) => (
+            <div key={blo}>
+              <div>
+                <div>
+                  <span>{blo?.title}</span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="bottom">
