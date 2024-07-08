@@ -118,7 +118,8 @@ const Contact = () => {
               We're open to collaborations with brands, influencers, and fellow
               food enthusiasts. If you're interested in partnering with Recipe
               Net for special projects, events, or content creation, please
-              reach out to us at partnerships@recipenetwork.com.
+              reach out to us at 
+              partnerships@recipenetwork.com.
             </span>
           </div>
           <div>
