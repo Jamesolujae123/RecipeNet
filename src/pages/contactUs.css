@@ -122,6 +122,10 @@
     padding-right: 75px;
   }
 
+  .soc span {
+    font-size: 18px;
+  }
+
   .contact-us-cont span {
     line-height: 35px;
     font-size: 20;
