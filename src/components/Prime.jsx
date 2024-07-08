@@ -232,7 +232,7 @@ const Prime = () => {
                     <img
                       className="food-img"
                       src={`${config.baseUrl}${food.image_url}`}
-                      alt="recipe pic"
+                      alt=""
                     />
                   </div>
                 </div>
@@ -273,7 +273,11 @@ const Prime = () => {
                       </div>
                     </div>
                     <div className="wrapper">
-                      <img className="food-img" src={`${config.baseUrl}${food.image_url}`} alt="recipe pic" />
+                      <img
+                        className="food-img"
+                        src={`${config.baseUrl}${food.image_url}`}
+                        alt=""
+                      />
                     </div>
                   </div>
                 ))}
@@ -285,7 +289,10 @@ const Prime = () => {
             </div>
           ) : (
             <span onClick={displayRemainder} className="vw-cont">
-              view more <FaArrowDown />
+              view more{" "}
+              <span>
+                <FaArrowDown />
+              </span>
             </span>
           )}
         </div>
