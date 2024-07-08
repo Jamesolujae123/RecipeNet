@@ -57,13 +57,13 @@
   font-size: 20px;
   padding-block: 10px;
   padding-inline: 15px;
+  margin-left: 70px;
   align-self: center;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
 .view-more {
   display: flex;
-  justify-content: center;
 }
 .remainder-cont {
   display: flex;
@@ -74,6 +74,8 @@
 .vw-cont {
   background-color: white;
   border-radius: 30px;
+  align-self: center;
+  justify-self: center;
   width: max-content;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -83,6 +85,7 @@
   padding-block: 10px;
   padding-inline: 15px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left: 580px;
 }
 
 .day {
@@ -436,6 +439,18 @@
 
   .first {
     margin-left: 25px;
+  }
+
+  .vw-cont-up {
+    margin-right: 180px;
+  }
+
+  .remainder-cont {
+    margin-left: 25px;
+  }
+
+  .vw-cont {
+    margin-left: 92px;
   }
 
   .food {
