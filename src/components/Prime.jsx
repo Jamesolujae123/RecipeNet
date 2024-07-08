@@ -65,7 +65,7 @@ const Prime = () => {
 
   return (
     <div className="req">
-      <div className="intro" data-aos="fade-left" data-aos-once="true">
+      <div className="intro" data-aos="fade-right" data-aos-once="true">
         <div>
           <span className="acc">Get access to</span>
           <p className="acc">
@@ -204,7 +204,7 @@ const Prime = () => {
                 :D
               </p>
             </div>
-            <div className="sec" data-aos="fade-left" data-aos-once="true">
+            <div className="sec" data-aos="fade-right" data-aos-once="true">
               {foods?.slice(0, 3).map((food) => (
                 <div
                   onClick={() => {
