@@ -73,6 +73,20 @@
     width: 250px;
   }
 
+  .f-opt {
+    border-radius: 14px;
+    font-size: 11px;
+    padding-inline: 7px;
+  }
+
+  .f-option-cont {
+    gap: 14px;
+  }
+
+  .rep-search-button {
+    width: 60px;
+  }
+
   .recipeName {
     padding-left: 20px;
   }
