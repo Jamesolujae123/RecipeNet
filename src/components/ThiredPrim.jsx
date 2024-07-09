@@ -21,7 +21,7 @@ import { FaArrowUp } from "react-icons/fa";
 import config from "../../config";
 import Placeholder from "../assets/Placeholder-web.jpg";
 
-const Prim = ({ topting, heading }) => {
+const ThirdPrim = ({ topting, heading }) => {
   const navigateTo = useNavigate();
 
   const id = useParams().id;
@@ -103,7 +103,6 @@ const Prim = ({ topting, heading }) => {
             ))}
           </div>
         </div>
-
         {foods?.length > 3 ? (
           <div className="view-more">
             {more ? (
@@ -171,10 +170,10 @@ const Prim = ({ topting, heading }) => {
           </div>
         ) : (
           ""
-        )}
+        )}{" "}
       </div>
     </div>
   );
 };
 
-export default Prim;
+export default ThirdPrim;
