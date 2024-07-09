@@ -66,6 +66,16 @@
   padding-top: 20px;
 }
 
+.tii {
+  display: flex;
+  gap: 10px;
+}
+
+.sutt {
+  display: flex;
+  gap: 20px;
+}
+
 .blog-img {
   height: 250px;
   width: 400px;
