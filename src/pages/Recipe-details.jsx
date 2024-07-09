@@ -29,6 +29,7 @@ import { Toaster, toast } from "sonner";
 import { useContext } from "react";
 import { Welcome, AppContext, UserL } from "../AppContext";
 import config from "../../config";
+import Placeholder from "../assets/Placeholder-web.jpg";
 
 const Recipe = () => {
   const [search, setSearch] = useState("");
@@ -148,7 +149,11 @@ const Recipe = () => {
         <div className="wrapper">
           <img
             className="meat"
-            src={`${config.baseUrl}${foodd?.image_url}`}
+            src={
+              !foodd.image_url
+                ? `${Placeholder}`
+                : `${config.baseUrl}${foodd.image_url}`
+            }
             alt=""
           />
         </div>
