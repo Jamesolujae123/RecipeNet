@@ -150,9 +150,9 @@ const Recipe = () => {
           <img
             className="meat"
             src={
-              !foodd.image_url
+              !foodd?.image_url
                 ? `${Placeholder}`
-                : `${config.baseUrl}${foodd.image_url}`
+                : `${config.baseUrl}${foodd?.image_url}`
             }
             alt=""
           />
