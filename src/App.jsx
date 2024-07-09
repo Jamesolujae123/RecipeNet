@@ -70,6 +70,7 @@ function App() {
                 <Route path="/EditR/:id" element={<EditRecipe />} />
                 <Route path="/Me" element={<Profile />} />
               </Routes>
+              <Toaster />
               <Footer />
             </UserOptions.Provider>
           </UserL.Provider>
