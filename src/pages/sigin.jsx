@@ -48,6 +48,7 @@ const Sigin = () => {
       const token = response?.data?.token;
       console.log(token);
       localStorage.setItem("token", token);
+      toast.success("Signin Successfull");
       console.log(response);
       navigateTo("/");
     } else {
