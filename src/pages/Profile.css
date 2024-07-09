@@ -10,6 +10,11 @@
   font-style: normal;
 }
 
+.profile-inp {
+  display: flex;
+  flex-direction: column;
+}
+
 .user-prof {
   width: 100px;
   height: 100px;
@@ -40,5 +45,6 @@
   padding-block: 10px;
   border-radius: 10px;
   padding-inline: 10px;
-  margin-left: 50px;
+  margin-top: 20px;
+  width: 170px;
 }
