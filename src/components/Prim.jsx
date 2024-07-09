@@ -90,7 +90,9 @@ const Prim = ({ topting, heading }) => {
                 <div className="wrapper">
                   <img
                     className="food-img"
-                    src={`${config.baseUrl}${food.image_url}`}
+                    src={!food.image_url
+                        ? `${Placeholder}`
+                        : `${config.baseUrl}${food.image_url}`}
                     alt=""
                   />
                 </div>
