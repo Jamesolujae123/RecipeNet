@@ -21,6 +21,7 @@ import "aos/dist/aos.css";
 import axios from "axios";
 import { FaArrowUp } from "react-icons/fa";
 import config from "../../config";
+import Placeholder from "../assets/Placeholder-web.jpg";
 
 const Prime = () => {
   const navigateTo = useNavigate();
@@ -233,7 +234,11 @@ const Prime = () => {
                   <div className="wrapper">
                     <img
                       className="food-img"
-                      src={`${config.baseUrl}${food.image_url}`}
+                      src={
+                        !food.image_url
+                          ? `${Placeholder}`
+                          : `${config.baseUrl}${food.image_url}`
+                      }
                       alt=""
                     />
                   </div>
@@ -282,7 +287,11 @@ const Prime = () => {
                       <div className="wrapper">
                         <img
                           className="food-img"
-                          src={`${config.baseUrl}${food.image_url}`}
+                          src={
+                            !food.image_url
+                              ? `${Placeholder}`
+                              : `${config.baseUrl}${food.image_url}`
+                          }
                           alt=""
                         />
                       </div>
