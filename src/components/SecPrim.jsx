@@ -64,7 +64,7 @@ const SecPrim = ({ topting, heading }) => {
         <div>
           <span className="rated">{heading}</span>
 
-          <div className="sec" data-aos="fade-left" data-aos-once="true">
+          <div className="sec" data-aos="fade-right" data-aos-once="true">
             {foods?.slice(0, 3).map((food) => (
               <div
                 key={food}
