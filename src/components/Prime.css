@@ -9,7 +9,7 @@
 @keyframes fade-right {
   0% {
     opacity: 0;
-    transform: translateX(-50px) scale(1);
+    transform: translateX(-65px) scale(1);
   }
 
   100% {
