@@ -252,10 +252,7 @@ const Prime = () => {
             {more ? (
               <div className="remainder-cont">
                 <div
-                  className="sec-m"
-                  data-aos="fade-left"
-                  data-aos-once="true"
-                >
+                  className="sec-m">
                   {foods?.slice(3).map((food) => (
                     <div
                       onClick={() => {
