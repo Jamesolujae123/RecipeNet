@@ -46,6 +46,12 @@ const SecPrim = ({ topting, heading }) => {
 
   useEffect(() => {
     getAllRecipes();
+    AOS.init({
+      offset: 200,
+      duration: 1500,
+      easing: "ease",
+      startEvent: "load",
+    });
   }, []);
 
   return (
