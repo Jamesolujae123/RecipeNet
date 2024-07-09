@@ -6,6 +6,7 @@ import profile from "../assets/Ellipse 38.png";
 import { FaStar } from "react-icons/fa6";
 import { MdOutlineStarBorder } from "react-icons/md";
 import config from "../../config";
+import Postplaceholder from "../assets/post-placehold.jpg";
 
 const FourthBlogArray = ({ BlogHead }) => {
   const [Blog, setBlog] = useState(null);
@@ -64,7 +65,11 @@ const FourthBlogArray = ({ BlogHead }) => {
                 <div className="img-cont">
                   <img
                     className="blog-img"
-                    src={`${config.baseUrl}${blob.image_url}`}
+                    src={
+                      !blob.image_url
+                        ? `${Postplaceholder}`
+                        : `${config.baseUrl}${blob.image_url}`
+                    }
                     alt=""
                   />
                 </div>
