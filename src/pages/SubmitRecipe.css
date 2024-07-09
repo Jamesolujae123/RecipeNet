@@ -285,7 +285,7 @@ height: 315px;
     background-position: center;
     background-size: cover;
     margin-left: 0px;
-    padding-left: 25px;
+    padding-inline: 25px;
     width: 400px;
   }
 
