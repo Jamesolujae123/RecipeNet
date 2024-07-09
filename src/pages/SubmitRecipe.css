@@ -284,7 +284,7 @@ height: 315px;
   .fom {
     background-position: center;
     background-size: cover;
-    margin-left: 10px;
+    margin-inline: 10px;
     padding-inline: 25px;
     width: 400px;
   }
