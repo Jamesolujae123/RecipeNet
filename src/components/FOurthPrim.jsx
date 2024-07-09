@@ -45,6 +45,12 @@ const FourthPrim = ({ topting, heading }) => {
   };
 
   useEffect(() => {
+     AOS.init({
+      offset: 200,
+      duration: 1500,
+      easing: "ease",
+      startEvent: "load",
+    });
     getAllRecipes();
   }, []);
 
