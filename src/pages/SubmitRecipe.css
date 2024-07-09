@@ -271,14 +271,21 @@ height: 315px;
     flex-direction: column;
     width: 360px;
     align-items: center;
+    margin-inline: 10px;
   }
 
+.d-name {
+  margin-inline: 10px;
+}
+  
   .r-name {
     width: 290px;
+    margin-inline: 10px;
   }
 
   .ffr {
     width: 330px;
+    margin-left: 10px;
   }
 
   .fom {
@@ -313,6 +320,7 @@ height: 315px;
   }
   .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content {
     width: 310px;
+    margin-left: 6px;
   }
 
   .ingr-container {
