@@ -317,6 +317,7 @@ height: 315px;
   .ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
     padding-left: 22px;
     width: 310px;
+    margin-left: 6px;
   }
   .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content {
     width: 310px;
