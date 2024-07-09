@@ -19,6 +19,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaArrowUp } from "react-icons/fa";
 import config from "../../config";
+import Placeholder from "../assets/Placeholder-web.jpg";
 
 const Prim = ({ topting, heading }) => {
   const navigateTo = useNavigate();
