@@ -90,7 +90,9 @@ const SecPrim = ({ topting, heading }) => {
                 <div className="wrapper">
                   <img
                     className="food-img"
-                    src={`${config.baseUrl}${food.image_url}`}
+                    src={!food.image_url
+                        ? `${Placeholder}`
+                        : `${config.baseUrl}${food.image_url}`}
                     alt=""
                   />
                 </div>
@@ -132,7 +134,9 @@ const SecPrim = ({ topting, heading }) => {
                     </div>
 
                     <div className="wrapper">
-                      <img className="food-img" src={`${config.baseUrl}${food.image_url}`} alt="" />
+                      <img className="food-img" src={!food.image_url
+                        ? `${Placeholder}`
+                        : `${config.baseUrl}${food.image_url}`} alt="" />
                     </div>
                   </div>
                 ))}
