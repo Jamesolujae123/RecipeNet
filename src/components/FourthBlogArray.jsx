@@ -83,11 +83,15 @@ const FourthBlogArray = ({ BlogHead }) => {
                     <div>
                       <span className="auth">{blob.Autor}</span>
                     </div>{" "}
-                    <div>
+                    <div className="sutt">
                       <span className="date">
                         Date:{" "}
                         <span className="d">{blob.updatedAt.slice(0, 10)}</span>
                       </span>
+                      <div className="tii">
+                        <span>{blob.User.first_name}</span>
+                        <span>{blob.User.last_name}</span>
+                      </div>
                     </div>
                   </div>
                   <div>
