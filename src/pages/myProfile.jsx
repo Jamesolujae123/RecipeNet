@@ -53,7 +53,7 @@ const Profile = () => {
 
       <div className="prof-cont">
         <div className="profile-details">
-          <div>
+          <div className="profile-inp">
             <img
               src={`${config.baseUrl}${userInfo?.image_url}`}
               alt=""
