@@ -258,6 +258,10 @@
 .ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
   padding-left: 22px;
 }
+.ffr {
+width: 560px;
+height: 315px;
+}
 
 @media screen and (max-width: 600px) {
   .title-contt {
@@ -274,7 +278,7 @@
   }
 
   .ffr {
-    width: 370px;
+    width: 330px;
   }
 
   .fom {
