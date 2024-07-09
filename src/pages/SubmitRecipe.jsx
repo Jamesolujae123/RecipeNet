@@ -209,8 +209,6 @@ const AddRecipe = () => {
             </span>
             <iframe
               className="ffr"
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/u1FAoLEG16c?si=CO8u5FWN8nnWxrPV"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
