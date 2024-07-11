@@ -480,6 +480,11 @@
   .rated {
     font-size: 25px;
   }
+
+  .food-img {
+  width: 200px
+  }
+  
   .day {
     font-size: 25px;
   }
