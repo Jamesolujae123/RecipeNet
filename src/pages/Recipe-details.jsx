@@ -149,11 +149,7 @@ const Recipe = () => {
         <div className="wrapper">
           <img
             className="meat"
-            src={
-              !foodd?.image_url
-                ? `${Placeholder}`
-                : `${config.baseUrl}${foodd?.image_url}`
-            }
+            src={ `${Placeholder}`}
             alt=""
           />
         </div>
