@@ -9,3 +9,16 @@
 .bap-name {
   margin-bottom: 20px;
 }
+
+.comment-cont {
+  width: 600px;
+  border-radius: 10px;
+  margin-left: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  .comment-cont {
+    width: 320px;
+    margin-left: 0px;
+  }
+}
