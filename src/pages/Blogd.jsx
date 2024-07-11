@@ -72,7 +72,7 @@ const Blogd = () => {
       makeComment,
       { headers }
     );
-
+GetComments();
     console.log(response);
   };
 
