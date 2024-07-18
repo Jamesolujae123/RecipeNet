@@ -127,7 +127,7 @@ const Recipe = () => {
     console.log(del);
     if (del.status === 204) {
       toast.success("Recipe deleted successfully");
-      GetReviews();
+      navigateTo("/");
     }
   };
 
