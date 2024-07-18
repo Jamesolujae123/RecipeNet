@@ -280,13 +280,18 @@ const Recipe = () => {
                                     <form action="">
                                       <button
                                         className="del-b"
-                                        onClick={async () => {
+                                        onClick={async (e) => {
+                                          e.preventDefault();
                                           const del = await axios.delete(
                                             `${config.baseUrl}/reviews/${blob.id}`,
                                             {
                                               headers,
                                             }
                                           );
+                                           if (del.status === 204) {
+                                    toast.success("Post deleted successfully");
+                                    GetAllPosts();
+                                        }
                                         }}
                                       >
                                         Delete
