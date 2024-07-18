@@ -149,7 +149,11 @@ const Recipe = () => {
         <div className="wrapper">
           <img
             className="meat"
-            src={ `${Placeholder}`}
+            src={
+              !foodd?.image_url
+                ? `${Placeholder}`
+                : `${config.baseUrl}${foodd?.image_url}`
+            }
             alt=""
           />
         </div>
@@ -278,7 +282,7 @@ const Recipe = () => {
                                         className="del-b"
                                         onClick={async () => {
                                           const del = await axios.delete(
-                                            `${baseUrl}/reviews/${blob.id}`,
+                                            `${config.baseUrl}/reviews/${blob.id}`,
                                             {
                                               headers,
                                             }
